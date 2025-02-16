@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.progName = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.addTask = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.progName = new System.Windows.Forms.Label();
             this.closeProgramm = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeProgramm)).BeginInit();
@@ -55,20 +55,20 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // progName
+            // dateTimePicker1
             // 
-            this.progName.BackColor = System.Drawing.Color.Transparent;
-            this.progName.Font = new System.Drawing.Font("Cascadia Code SemiBold", 14F);
-            this.progName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(204)))));
-            this.progName.Location = new System.Drawing.Point(12, 0);
-            this.progName.Name = "progName";
-            this.progName.Size = new System.Drawing.Size(147, 30);
-            this.progName.TabIndex = 0;
-            this.progName.Text = "Napominalka";
-            this.progName.Click += new System.EventHandler(this.label1_Click);
-            this.progName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
-            this.progName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
-            this.progName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
+            this.dateTimePicker1.Location = new System.Drawing.Point(163, 374);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(163, 418);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(215, 20);
+            this.textBox1.TabIndex = 3;
             // 
             // addTask
             // 
@@ -101,6 +101,21 @@
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
             this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
             // 
+            // progName
+            // 
+            this.progName.BackColor = System.Drawing.Color.Transparent;
+            this.progName.Font = new System.Drawing.Font("Cascadia Code SemiBold", 14F);
+            this.progName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(204)))));
+            this.progName.Location = new System.Drawing.Point(12, 0);
+            this.progName.Name = "progName";
+            this.progName.Size = new System.Drawing.Size(147, 30);
+            this.progName.TabIndex = 0;
+            this.progName.Text = "Napominalka";
+            this.progName.Click += new System.EventHandler(this.label1_Click);
+            this.progName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
+            this.progName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
+            this.progName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
+            // 
             // closeProgramm
             // 
             this.closeProgramm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
@@ -115,21 +130,6 @@
             this.closeProgramm.Click += new System.EventHandler(this.CloseProgramm_Click);
             this.closeProgramm.MouseLeave += new System.EventHandler(this.closeProgramm_MouseLeave);
             this.closeProgramm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.closeProgramm_MouseMove);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(163, 418);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(163, 374);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // MainForm
             // 
