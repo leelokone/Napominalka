@@ -19,7 +19,7 @@ namespace Napominalka
 
         public MainForm()
         {
-    
+
             InitializeComponent();
             InitializeListView();
 
@@ -27,10 +27,10 @@ namespace Napominalka
 
         private void InitializeListView()
         {
-     
-            listViewTasks.Columns.Add("Дата", 100);     
-            listViewTasks.Columns.Add("Время", 100);    
-            listViewTasks.Columns.Add("Описание", -2); 
+
+            listViewTasks.Columns.Add("Дата", 100);
+            listViewTasks.Columns.Add("Время", 100);
+            listViewTasks.Columns.Add("Описание", -2);
 
             listViewTasks.View = View.Details;
         }
@@ -42,7 +42,7 @@ namespace Napominalka
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CloseProgramm_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace Napominalka
         private void closeProgramm_MouseMove(object sender, MouseEventArgs e)
         {
             closeProgramm.BackColor = Color.FromArgb(255, 23, 50);
-            
+
         }
 
         private void closeProgramm_MouseLeave(object sender, EventArgs e)
@@ -134,6 +134,24 @@ namespace Napominalka
             }
 
 
+        }
+
+        private void buttonSaveFile_Click(object sender, EventArgs e)
+        {
+            List<TaskItem> tasks = new List<TaskItem>();
+
+            // Преобразуем элементы ListView в список задач
+            foreach (ListViewItem item in listViewTasks.Items)
+            {
+                tasks.Add(new TaskItem
+                {
+                    Date = DateTime.Parse(item.SubItems[0].Text),
+                    Time = DateTime.Parse(item.SubItems[1].Text),//тут завтра нужно объяснение
+                    Description = item.SubItems[2].Text
+                });
+            }
+
+            SaveLoader.SaveTasks(tasks);
         }
     }
 }

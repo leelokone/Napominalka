@@ -39,6 +39,7 @@
             topPanel = new Panel();
             progName = new Label();
             closeProgramm = new PictureBox();
+            buttonSaveFile = new Button();
             panel1.SuspendLayout();
             topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeProgramm).BeginInit();
@@ -47,6 +48,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(48, 48, 48);
+            panel1.Controls.Add(buttonSaveFile);
             panel1.Controls.Add(buttonDeleteTask);
             panel1.Controls.Add(buttonEditTask);
             panel1.Controls.Add(listViewTasks);
@@ -194,8 +196,8 @@
             // 
             closeProgramm.BackColor = Color.FromArgb(36, 36, 36);
             closeProgramm.Cursor = Cursors.Hand;
-            closeProgramm.Image = NapominalkaCore.Properties.Resources.cross;
-            closeProgramm.InitialImage = NapominalkaCore.Properties.Resources.cross;
+            closeProgramm.Image = Properties.Resources.cross;
+            closeProgramm.InitialImage = Properties.Resources.cross;
             closeProgramm.Location = new Point(1003, 0);
             closeProgramm.Margin = new Padding(4, 3, 4, 3);
             closeProgramm.Name = "closeProgramm";
@@ -206,6 +208,25 @@
             closeProgramm.Click += CloseProgramm_Click;
             closeProgramm.MouseLeave += closeProgramm_MouseLeave;
             closeProgramm.MouseMove += closeProgramm_MouseMove;
+            // 
+            // buttonSaveFile
+            // 
+            buttonSaveFile.BackColor = Color.FromArgb(36, 36, 36);
+            buttonSaveFile.Cursor = Cursors.Hand;
+            buttonSaveFile.FlatAppearance.BorderSize = 0;
+            buttonSaveFile.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
+            buttonSaveFile.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
+            buttonSaveFile.FlatStyle = FlatStyle.Flat;
+            buttonSaveFile.Font = new Font("Cascadia Code SemiBold", 14F);
+            buttonSaveFile.ForeColor = Color.FromArgb(0, 150, 204);
+            buttonSaveFile.Location = new Point(175, 421);
+            buttonSaveFile.Margin = new Padding(4, 3, 4, 3);
+            buttonSaveFile.Name = "buttonSaveFile";
+            buttonSaveFile.Size = new Size(148, 39);
+            buttonSaveFile.TabIndex = 9;
+            buttonSaveFile.Text = "Save";
+            buttonSaveFile.UseVisualStyleBackColor = false;
+            buttonSaveFile.Click += buttonSaveFile_Click;
             // 
             // MainForm
             // 
@@ -238,5 +259,6 @@
         private System.Windows.Forms.ListView listViewTasks;
         private System.Windows.Forms.Button buttonEditTask;
         private System.Windows.Forms.Button buttonDeleteTask;
+        private Button buttonSaveFile;
     }
 }
